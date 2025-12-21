@@ -1,0 +1,1 @@
+`__builtin_popcountll(x)`，返回x二进制中1的数量，o(1)

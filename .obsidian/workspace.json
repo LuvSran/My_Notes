@@ -1,0 +1,212 @@
+{
+  "main": {
+    "id": "1c3d958ab8f5309d",
+    "type": "split",
+    "children": [
+      {
+        "id": "d06ebaf2f516dc3e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1bdf662d4c12d50d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Backend/git.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1b9e9873ca1a7cae",
+    "type": "split",
+    "children": [
+      {
+        "id": "0cab4c5fb22b6185",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "854e113142985358",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byCreatedTime"
+              }
+            }
+          },
+          {
+            "id": "20e67f175d4026f5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e538a859e2d83299",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Competice_Programing/data struct/Segment_tree/Dynamic.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "084739c9be5e0143",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "dc7d263fde39efa4",
+    "type": "split",
+    "children": [
+      {
+        "id": "980d13589879567f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "655c5f8b489ab16b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Backend/git.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "826a723652432284",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Backend/git.md",
+                "linksCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fd747670e866c16c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "365495cd6f3fd40d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Backend/git.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "1bdf662d4c12d50d",
+  "lastOpenFiles": [
+    "Competice_Programing/sundry/Go语言快读快写.md",
+    "Competice_Programing/sundry/火车头.md",
+    "Competice_Programing/sundry/Warning.md",
+    "Competice_Programing/sundry/Trick.md",
+    "Competice_Programing/sundry/skill.md",
+    "Competice_Programing/sundry/HINT.md",
+    "Competice_Programing/sundry/create a link.md",
+    "Backend/git.md",
+    "Competice_Programing/sundry/Welcome.md",
+    "新建 文本文档.txt",
+    "Backend/Pwershell命令.md",
+    "未命名",
+    "Golang/Package/net.md",
+    "Backend",
+    "计网/HTTP.md",
+    "Golang/gin/RouterGoup.md",
+    "Golang/gin/gin.Engin.md",
+    "Golang/gin/Main.md",
+    "Golang/Example/快读.md",
+    "Golang/Example/并发池.md",
+    "Golang/gin",
+    "Competice_Programing/data struct/Segment_tree/normal.md",
+    "Competice_Programing/data struct/DSU.md",
+    "Competice_Programing/data struct/Segment_tree/ZhuXi.md",
+    "Competice_Programing/data struct/Segment_tree/seachint line.md",
+    "Competice_Programing/Problem idea/Fans.md",
+    "Competice_Programing/data struct/Segment_tree/Dynamic.md",
+    "Competice_Programing/Graph theory/Tarjan.md",
+    "Golang/Example",
+    "Golang/Package",
+    "Competice_Programing/DP/tree bag.md",
+    "Competice_Programing/math/Combination theory.md",
+    "计网",
+    "Competice_Programing/picture/8a8c092ff1df8e7f8f2feb34c557975.jpg",
+    "Competice_Programing",
+    "Golang",
+    "未命名.canvas",
+    "Competice_Programing/Nice Problem",
+    "屏幕截图 2025-05-03 165518.png",
+    "屏幕截图 2025-05-03 165503.png",
+    "屏幕截图 2025-05-03 165440.png",
+    "屏幕截图 2025-05-03 165412.png",
+    "Competice_Programing/picture/06c99ca0f54d2503ad3b54e158cc9c2 2.jpg",
+    "06c99ca0f54d2503ad3b54e158cc9c2.jpg",
+    "Competice_Programing/picture/06c99ca0f54d2503ad3b54e158cc9c2 1.jpg",
+    "Competice_Programing/picture/f55babb2eaf8ad7b0b59b429865e04e.jpg",
+    "Competice_Programing/picture/Pasted image 20240404165141.png"
+  ]
+}

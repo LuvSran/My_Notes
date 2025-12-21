@@ -1,0 +1,21 @@
+```
+gin 包结构体关系：
+Engine (主引擎)
+├── RouterGroup (路由组)
+│   ├── Context (上下文)
+│   │   ├── Param (路径参数)
+│   │   ├── Params (参数切片)
+│   │   ├── ResponseWriter (响应写入器)
+│   │   └── HandlerFunc (处理器函数)
+│   ├── HandlerFunc (处理器函数)
+│   └── HandlersChain (处理器链)
+├── RouteInfo (路由信息)
+├── RoutesInfo (路由信息切片)
+├── LoggerConfig (日志配置)
+├── RecoveryConfig (恢复配置)
+├── LocalFile (本地文件)
+├── HTMLRender (HTML渲染器)
+├── Render (渲染接口)
+├── StructValidator (结构体验证器)
+└── KeyError (验证错误)
+```

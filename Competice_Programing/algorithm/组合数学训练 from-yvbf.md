@@ -1,0 +1,20 @@
+- #CombinatoricsBasic 组合数学基础（排列数、组合数），二项式定理
+- LC3343. 统计平衡排列的数目 #DPKnapsack #CombinatoricsBasic
+- LC3352. 统计小于 N 的 K 可约简整数 #BitBasic #CombinatoricsBasic
+- CF2041H. Sheet Music #CombinatoricsBasic （注意思维误区UUUDUUU是合法的，不需要是12343456，可以是12341234）
+- CF2047B. Replace Character #CombinatoricsBasic
+- CF660E. Difference Subsets For All Tuples #Contribution #CombinatoricsBasic
+- LC3395. 唯一中间众数子序列 I #CombinatoricsBasic #ModInt #SweepLine
+- LC2405. 统计恰好有K个相等相邻元素的数组的数目 #CombinatoricsBasic
+- CF2060F. Multiplicative Arrays #ModInt #CombinatoricsBasic #Prime / #Sum1Div1toN (可以直接分解约数，也可以用枚举约数乘上去累计-调和级数复杂度)
+- LC3426. 所有安放棋子方案的曼哈顿距离 #ModInt #CombinatoricsBasic #Contribution (* 考虑任意两个格子距离的贡献，其他棋子方法数是 $ C(n*m-2,k-2) $ ，某个格子到所有格子距离和可以递推，考虑相邻格子这个和的关系)
+- LC3470. 全排列 IV #CantorExpansion #CombinatoricsBasic #DP2D (计算给定n个奇数，m个偶数，有多少合法的排列，dp递推一下，不dp直接组合公式算一下也可以)
+- CF2078F. Binary Subsequence Value Sum #ModInt #CombinatoricsBasic (*组合数学，不常见组合数学公式，注意学习。。。)
+- CF2086D. Even String #ModInt #CombinatoricsBasic #DPKnapsack (经典01背包，套组合数学)
+- LC3518. 最小回文排列 II #CombinatoricsBasic #TryFill
+- LC3539. 魔法序列的数组乘积之和 #ModInt #DPMultiD #CombinatoricsBasic (注意在二进制位上逐位递推，保存下一位进位的数字作为状态。每次递推合法的序列数需要组合数算一下)
+- LC3559. 给边赋权值的方案数 II #LCA #CombinatoricsBasic (简单算树上两点距离，然后简单组合数学公式)
+- CF888D. Almost Identity Permutations #CombinatoricsBasic (错位排列)
+- CF893E. Counting Arrays #CombinatoricsBasic
+- CF938E. Max History #Contribution #CombinatoricsBasic (* 曲棍球棒恒等式（hockey-stick identity）)
+- CFGYM106035C.  Unsuccessful pseudo-random #CombinatoricsBasic (二项式定理，暴力计算，C(100,50)<2^127 )
