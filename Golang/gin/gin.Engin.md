@@ -14,7 +14,6 @@ gin.Engine
     ├── NoRoute() 404 处理
     └── NoMethod() 405 处理
 ```
-### 方法
 **路由相关（继承自 RouterGroup）：**
 ```go
 // HTTP 方法
