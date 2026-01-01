@@ -1,4 +1,4 @@
-```
+```cpp
 struct KMP{ // 1_Index
     vector<int> fail;
     string P; 

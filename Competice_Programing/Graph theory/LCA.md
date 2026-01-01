@@ -1,6 +1,6 @@
 # 最近公共祖先
 # DFS序+ST表（o(1)查询）
-```
+```cpp
 template<int N> struct Tree_theory{
     const vector<int>* adj;
     int dfn[N]; 
@@ -61,7 +61,7 @@ template<int N> struct Tree_theory{
 Tree_theory<maxn> T;
 ```
 $lca(u,v)$，为 $dfn(u)+1-dfn(v)$ 之间，深度最小的点的父节点
-```
+```cpp
 vector<int> e[maxn];
 int dfn[maxn]; //i的时间戳
 int fa[maxn]; //时间戳i的父节点

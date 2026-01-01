@@ -1,4 +1,4 @@
-```
+```cpp
 struct Manacher{
     vector<int> r;  // r[i]:以 t[i] 为中心的最长回文半径（包含自身）
     string t;       // 预处理后的字符串，下标从 1 开始

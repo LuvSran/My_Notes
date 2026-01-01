@@ -27,14 +27,14 @@ template<int N>struct DSU{
 1. 如何判断树根：`if(p[x]==x)`
 2. 如何求x所在集合的编号:`while(p[x]!=x) x=p[x];`路径压缩优化：第一次找到祖宗（根节点）后，就将寻找路径上的所有节点x的p[x]设为祖宗）
 *路径压缩优化*
-```
+```cpp
 int find(int x){     //返回x的祖宗节点编号+路径压缩
    if(p[x]!=x) p[x]=find(p[x]); 
     return p[x];
 }
 ```
-*迭代 find()*
- ```
+*非递归实现*
+ ```cpp
  int find(int x){
     while(p[x]!=x) {
         p[x]=p[p[x]];  // 路径压缩
@@ -47,7 +47,7 @@ int find(int x){     //返回x的祖宗节点编号+路径压缩
 3. 如何合并两个集合：将其中一个集合的根节点连接另一个集合的根节点（即将一颗树的根节点视为另一颗树根节点的子结点）:`p[find(a)]=find(b)`
 *带权并查集*
 ## 维护连通块中点的数量`_size[]`
-```
+```cpp
 int p[MN];  
 int _size[MN];
 void prepro(int nn){   //初始化
@@ -62,7 +62,7 @@ void prepro(int nn){   //初始化
 1. 更新`_size[]时`，是作根size+=额外合并size
 2. 若`pa==pb`，即两节点根相同，不能更新`_size[]`
 ## 维护节点`i`到祖宗节点的距离`dist[i]`
-```
+```cpp
 int p[maxn];
 int dist[maxn];
 int find(int x){
@@ -90,7 +90,7 @@ void init(int _n){
 更新`d[]`时，将`x`合并到`y`上，则是更新`d[px]`
 ***
 ## 交换两个集合内所有元素
-```
+```cpp
 int p[maxn];
 int fx[maxn]; //部落i的集合编号
 int xf[maxn]; //集合编号i对应的部落

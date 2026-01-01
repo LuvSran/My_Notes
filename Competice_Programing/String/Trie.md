@@ -1,7 +1,7 @@
 Trie树（字典树）
 用于在一个集合中高效地插入和查找字符串
 ***模板（插入和查询）***
-```
+```cpp
 int32_t bk[300];
 void prework(){
 	for(int i='0',j=0;i<='9';++i,++j) bk[i]=j;
@@ -63,7 +63,7 @@ template<int N>struct Trie{ //传字符串s一定要s=" "+s;
 Trie<1000020> T;
 ```
 ## 01 Trie
-```
+```cpp
 template<int N,int bitN>struct _01Trie{ //总数量 / 数字bit位数
     int son[N*bitN][2];  
     ll val[N*bitN]; //指针i对应的数字

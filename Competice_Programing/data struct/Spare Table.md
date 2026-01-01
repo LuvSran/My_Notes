@@ -15,7 +15,7 @@ template<typename T,int N> struct STB{
 		return min(f[l][k],f[r-(1ll<<k)+1][k]);
 	}
 };
-STB<200005> T;
+STB<int,200005> T;
 ```
 用于查询具有结合律且可重复贡献的区间信息，例如区间最大/最小值，区间最大公因数/最小公倍数，区间按位与/按位或
 `f[i][j]`表示以第`i`个数为起点，长度为`2^j`区间的信息
@@ -42,7 +42,7 @@ int res;
 res=max(f[l][k],f[r-(1<<k)+1][k])); //区间最大值,r=l+len-1
 res=f[l][k]|f[r-(1<<k)+1][k]; //区间或
 ```
-*logg预处理*
+*小优化:log预处理*
 重复计算`log2(n)`较慢，开一个`logg[i]`数组表示`log2(i)`，递推：`logg[i]=logg[i/2]+1`
 ```
 int logg[MAXN]; // 存储 log2(i) 的值 

@@ -10,7 +10,7 @@ template <int N>struct Segment_tree{  
     void push_up(int p){  
         tr[p].sum=tr[ls].sum+tr[rs].sum;  
     }  
-    void build(int p,int lo,int ro){  
+    void Build(int p,int lo,int ro){  //建树,值域为lo~ro
         tr[p].l=lo,tr[p].r=ro;  
         tr[p].sum=0;  
         if(lo==ro) return;  
