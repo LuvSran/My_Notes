@@ -9,8 +9,10 @@ struct Line{
     }
 };
 Line line[2*maxn];
-vector<int> X;
+vector<int> X; //离散化
 struct Segment_tree{
+	#define ls (p<<1)
+    #define rs ((p<<1)|1)
     struct{
         int l,r,len,val;
     }z[8*maxn];

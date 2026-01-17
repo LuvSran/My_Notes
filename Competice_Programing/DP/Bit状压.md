@@ -1,5 +1,15 @@
-求0~n-1的最短哈密顿路径长度
+枚举子集的非空子集,o($3^n$)
+```cpp
+ for(int i=0;i<=lim;++i){
+	 for(int s=(i-1)&i;s>0;s=(s-1)&i){
+	     int other=i^s;
+         if(s>other) continue; //去重,防止重复计算
+         //other为i的所有非空子集
+	  }
+  }
 ```
+求0~n-1的最短哈密顿路径长度
+```cpp
 #define Bit(_i,_j) ((_i>>_j)&1)
 #define Set_0(_i,_j) (_i&=(~(1ll<<_j)))
 const int maxn=22;

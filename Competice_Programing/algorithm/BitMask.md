@@ -3,8 +3,17 @@
 #define Set_1(_i,_j) (_i|(1ll<<_j)) //将i的第j位设为1
 #define Set_0(_i,_j) (_i&(~(1ll<<_j))) //将i的第j位设为0
 #define Rev(_i,_j) (_i^(1ll<<_j)) //将i的第j位取反
+ll Low(ll u,ll u){ //返回u截断高于i位的部分,eg:(1011,2)->11
+    return u&((1ll<<(i+1))-1);
+}
+ll Buji(ll u,ll v){ //将u变成v的超集需要的补集,eg:(1010,0110)->0100
+	return (u&v)^v;
+}
+bool bel(ll u,ll v){ //判断v是否是u的子集
+	return (u&v)==v;
+}
+for(int s = mask; s; s = (s-1) & mask)//枚举mask的所有子集。
 ```
-
 # 函数 
 `__builtin_popcountll(n)`：返回n的64位二进制中有几个1
 `__builtin_clzll(n)`:返回n的64位二进制中前导零个数

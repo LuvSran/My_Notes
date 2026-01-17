@@ -9,7 +9,7 @@ void prework(){
 	for(int i='A',j=36;i<='Z';++i,++j) bk[i]=j;
 }
 template<int N>struct Trie{ //传字符串s一定要s=" "+s;
-    int32_t tr[N][65],cnt[N];
+    int32_t tr[N][66],cnt[N];
     int32_t fa[N]; char ch[N];
     int32_t ix=0;
     void Clear(){
