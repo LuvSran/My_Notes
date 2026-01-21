@@ -1,9 +1,10 @@
 ```cpp
-#define Bit(_i,_j) ((_i>>_j)&1) //求i的第j位
-#define Set_1(_i,_j) (_i|(1ll<<_j)) //将i的第j位设为1
-#define Set_0(_i,_j) (_i&(~(1ll<<_j))) //将i的第j位设为0
-#define Rev(_i,_j) (_i^(1ll<<_j)) //将i的第j位取反
-ll Low(ll u,ll u){ //返回u截断高于i位的部分,eg:(1011,2)->11
+#define lowbit(x) ((x)&(-(x)))
+#define Bit(_i,_j) (((_i)>>(_j))&1) //求i的第j位
+#define Set_1(_i,_j) ((_i)|(1ll<<(_j))) //将i的第j位设为1
+#define Set_0(_i,_j) ((_i)&(~(1ll<<(_j)))) //将i的第j位设为0
+#define Rev(_i,_j) ((_i)^(1ll<<(_j))) //将i的第j位取反
+ll Low(ll u,int i){ //返回u截断高于i位的部分,eg:(1011,2)->11
     return u&((1ll<<(i+1))-1);
 }
 ll Buji(ll u,ll v){ //将u变成v的超集需要的补集,eg:(1010,0110)->0100

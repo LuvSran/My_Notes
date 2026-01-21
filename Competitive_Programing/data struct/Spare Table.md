@@ -1,5 +1,5 @@
 # ST表(o(nlogn)预处理，o(1)查询)
-```
+```cpp
 template<typename T,int N> struct STB{
 	T f[N][25];
 	void Build(T t[],int _n){

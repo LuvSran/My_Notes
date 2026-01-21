@@ -56,7 +56,7 @@ ll ask(int lo,int ro){
 }
 ```
 区间加乘，区间求和
-```
+```cpp
 int L[maxn],R[maxn];
 ll add[maxn],mul[maxn];
 ll sum[maxn];

@@ -135,7 +135,7 @@ for(int i=1;i<=n;i++){
 	}
 ```
 
-![](picture/06c99ca0f54d2503ad3b54e158cc9c2%201.jpg)
+![](06c99ca0f54d2503ad3b54e158cc9c2%201.jpg)
 # 二维差分
 add函数，将原矩阵mat中左上顶点(x1,y1)到右下顶点(x2,y2)的元素加上值k
 ```cpp
@@ -165,4 +165,4 @@ for(int i=1;i<=n;i++){
 		cout << '\n';
 	}
 ```
-![](picture/8a8c092ff1df8e7f8f2feb34c557975.jpg)
+![](8a8c092ff1df8e7f8f2feb34c557975.jpg)

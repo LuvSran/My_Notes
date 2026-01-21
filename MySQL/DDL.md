@@ -10,7 +10,6 @@ CREATE TABLE 表名 (
     字段1 数据类型 [约束],
     字段2 数据类型 [约束]
 );
-
 #复制表结构（不含数据）
 CREATE TABLE 新表名 LIKE 原表名;
 
@@ -49,4 +48,18 @@ DROP TABLE 表名;
 
 #清空表（保留结构）
 TRUNCATE TABLE 表名;
+```
+视图:  视图是一个虚拟表，其内容由查询定义。
+```sql
+# 创建一个视图 
+create view v_article as select title from article; 
+
+# 使用视图 
+select * from v_article; 
+
+# 修改视图 
+alter view v_article as select id, title from article; 
+
+# 删除视图 
+drop view if exists v_article;
 ```

@@ -1,5 +1,5 @@
 Krusal重构树
-```
+```cpp
 using ll = long long;
 const int maxn=1e5+20;
 template<int N> struct LCA{

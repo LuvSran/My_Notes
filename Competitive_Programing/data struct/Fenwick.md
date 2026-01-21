@@ -42,7 +42,7 @@ template<int N> struct Fenwick{
 
 
 # 区修点查
-```
+```cpp
 int a[maxn];
 struct Fenwick{
     int ft[maxn];  
