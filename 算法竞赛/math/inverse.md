@@ -1,4 +1,4 @@
-```
+```cpp
 const ll mod=998244353;
 ll qpow(ll _a,ll _b){ //快速幂求a^b%p  
     ll res=1;  

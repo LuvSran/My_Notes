@@ -7,7 +7,7 @@ template<int N>struct DSU{
     void Init(int _n){
         for(int i=0;i<=_n+2;++i) p[i]=i,sz[i]=1;
     }
-    int find(int x){
+    int Find(int x){
         while(p[x]!=x) {
             p[x]=p[p[x]];  
             x=p[x];

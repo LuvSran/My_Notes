@@ -63,7 +63,7 @@ $C^m_n=C^m_{n-1}+C^{m-1}_{n-1}$
 ```cpp
 ll comb[maxn][maxn];  //下标/上标  
 void init(int nn,ll p){  
-    for(int i=0;i<=nn;++i){  
+    for(int i=0;i<=nn;++i){  //i从0开始是正确的
         for(int j=0;j<=i;++j){  
             if(j==0) comb[i][j]=1;  
             else comb[i][j]=(comb[i-1][j]+comb[i-1][j-1])%p;  

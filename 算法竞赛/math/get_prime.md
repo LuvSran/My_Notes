@@ -1,5 +1,5 @@
 # 欧拉筛板子
-```
+```cpp
 template<int N> struct SHAI{
     vector<int> prim,minp;
     void Run(){  //筛1~N的质数
@@ -21,6 +21,24 @@ template<int N> struct SHAI{
     }
 };
 SHAI<maxn> T;
+```
+```javascript
+class SHAI{ //JavaScript版
+    prim=[];
+    minp=new Int32Array(maxn);
+    constructor(n){
+        for(let i=2;i<=n;++i){
+            if(this.minp[i]==0) this.minp[i]=i,this.prim.push(i);
+            for(let x of this.prim){
+                if(i*x>n) break;
+                this.minp[i*x]=x;
+                if(this.minp[i]==x) break;
+            }
+        }
+    }
+    Ask=(x)=>x==this.minp[x];
+    Minp=(x)=>this.minp[x];
+};
 ```
 ## 埃氏筛
 ```

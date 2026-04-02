@@ -1,5 +1,5 @@
 动态开点线段树
-```
+```CPP
 const int maxn=3*1e5*50;
 int root;
 namespace L{  

@@ -4,7 +4,7 @@
     [1,3],[3,5] --> [1,5]
     [1,3],[3,5],[7,10],[9,12] --> [1,5],[7,12]
 ## 模板
-```
+```CPP
 typedef pair<int,int> Pii;
 vector<pii> a;
 vector<pii> merge(vector<pii> &vc){

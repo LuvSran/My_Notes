@@ -1,4 +1,4 @@
-判断三点是否贡献
+判断三点是否共线
 ```cpp
 bool same_line(ll x1,ll y1,ll x2,ll y2,ll x3,ll y3){
     return (x2-x1)*(y3-y1)-(x3-x1)*(y2-y1)==0;  //叉积为0共线

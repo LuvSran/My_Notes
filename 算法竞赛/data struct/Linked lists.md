@@ -1,5 +1,5 @@
 # 链表
-```
+```cpp
 template<int N>struct List{
     int tot=1; //指针编号，虚头指针为0,虚尾指针为1
     struct nd{

@@ -15,7 +15,7 @@ for(int k=0;x1+k*dx<=n && x1+k*dx>=1 && y1+k*dy<=n && y1+k*dy>=1;--k)
  6. 点`( x1,y1 ),( x2,y2 )`的曼哈顿距离,等于点` ( x1+y1,x1-y1),( x2+y2,x2-y2 )`的切比雪夫距离。切比雪夫转曼哈顿则为`( x,y ) => ( (x+y)/2,(x-y)/2 )`
  
 7. 判断子集和是否存在dp，bitset优化，$n^2 => n^2/64$
-```
+```cpp
 //原
 vector<bool> dp(maxn,false);
 dp[0]=true;
