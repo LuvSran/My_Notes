@@ -11,30 +11,27 @@
 |align-content|多行交叉轴对齐（只有多行才生效）|
 子
 
-|  |  |
-| ---- | ---- |
 | **属性** | **说明** |
+| ---- | ---- |
 | flex | 简写：flex-grow flex-shrink flex-basis |
 | order | 排序 |
 | align-self | 单个项目的交叉轴对齐 |
-|  |  |
-|  |  |
 flex: 1   `flex-grow: 1`、`flex-shrink: 1` 和 `flex-basis: 0%` 的缩写。多元素设置该属性时，它们会按照比例平分剩余空间，常用于实现“左固定、右自适应”或“等分布局”。
 # 两栏布局
 * flex => width: 200px => flex: 1
 * float: left  =>  width: 200px  =>  overflow: hidden
 * float: left  =>  width: 200px =>  margin-left: 200px
-* position: relative  =>  position:absolute  =>  width:200px  =>  left: 0  =>  margin-left: 200px
+* position: relative  =>  position:absolute   =>  left: 0  =>  width: 200px  =>  margin-left: 200px
 # 三栏布局
 * flex   =>   width : 200px   =>   flex : 1
 * width : 200px    =>    float : left    =>    float : right    =>    margin : 0 200px
-* 相对绝对  =>  left : 0px  =>  right : 0 px  => left 200px+right 200px
+* 相对绝对  =>  left : 0px  =>  right : 0 px  => margin-left 200px + margin-right 200px
 * grid  => grid-template-columns: 200px auto 200px
 # BFC
 ## 描述
 独立渲染区域  =>  块级元素参与  =>  内部布局不影响外部元素，反之亦然
 ## 触发条件
-- `float` `position`  `display` `overflow` 
+- `float` `position`  `display(flow-root)` `overflow` 
 ## 特性/作用
 margin合并， 高度塌陷， 文字环绕， 复杂布局
 ## 使用场景
@@ -61,7 +58,7 @@ height = line-height
 none, inline, block, inline-block, flex, grid, table 
 # position
 static, relative, absolute, fixed, stricky(滑动到某个点变fixed)
-脱标: absolute, fixed
+脱标: absolute, fixed, stricky(变fixed)
 # CSS新特性
 box-shadow, border-radius, transition/animation, transform, flex/grid
 # 伪类与伪元素区别
