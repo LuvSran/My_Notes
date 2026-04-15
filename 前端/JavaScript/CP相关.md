@@ -37,7 +37,7 @@ const build=(root)=>{ //传根指针
 *双端队列*
 ```javascript
 class deque {
-    constructor(n = 5*1e5 + 20) { this.dq = new Int32Array(n); this.c = n >> 1; this.hh = this.c; this.tt = this.c - 1; }
+    constructor(n = 5*1e5 + 20) { this.dq = new Array(n).fill(0); this.c = n >> 1; this.hh = this.c; this.tt = this.c - 1; }
     push_back = (x) => this.dq[++this.tt] = x;
     push_front = (x) => this.dq[--this.hh] = x;
     pop_back = () => this.dq[this.tt--];

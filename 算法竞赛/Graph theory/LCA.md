@@ -103,7 +103,7 @@ int lca(int u,int v){
 ```
 
 ## 倍增(nlogn预处理，logn查询)
-```
+```CPP
 vector<int> e[maxn];  
 int dep[maxn],pa[maxn][30];  
 int n,m,s;  
@@ -131,7 +131,7 @@ int lca(int u,int v){
 }
 ```
 ## tarjan(离线，o(n+m(询问数))
-```
+```cpp
 vector<int> e[maxn];  
 vector<pii> query[maxn];  
 int ans[maxn];  

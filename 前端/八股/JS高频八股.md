@@ -70,7 +70,7 @@ js 是单线程的，为了防止代码阻塞，任务分为同步和异步。
 微任务:   Promise.then， process.nextTick
 # Promise
 解释：
-	Promise是ES6新引入的异步编程解决方案，语法上来说是一个构造函数，逻辑上来说是一个容器，保存着某个未来结束的事件，通常是异步操作。它有三种互斥的状态，Pending, Fulfilled, Rejected。状态只能从Pending变成Fulfilled或Rejected，一旦确定就不会再变。支持链式调用，也就是上一个.then的结果传给下一个.then,解决传统的回调地狱问题。
+	Promise是ES6新引入的异步编程解决方案，*语法*上来说是一个构造函数，*逻辑*上来说是一个容器，保存着某个未来结束的事件，通常是异步操作。它有*三种互斥的状态*，Pending, Fulfilled, Rejected。状态只能从Pending变成Fulfilled或Rejected，一旦确定就不会再变。支持链式调用，也就是上一个.then的结果传给下一个.then,解决传统的回调地狱问题。
 .then返回值：
 	 普通值：等价于Promise.resolve()这个普通值
 	 没有返回值: 等价于Promise.resolve(undefined)
@@ -86,9 +86,10 @@ js 是单线程的，为了防止代码阻塞，任务分为同步和异步。
 7. `Promise.prototype.catch()` - 添加失败回调
 8. `Promise.prototype.finally()` - 无论成功失败都执行
 # async / await
-是一个异步编程语法糖，底层是基于promise的。async表示当前函数是一个异步函数，会将返回值包装成一个promise。并且await关键字只能再async函数内部使用。await 后面通常跟一个Promise对象或者普通值，表示等待promise的完成，等价于promise.then()。相比于promise, async / await的可读性更好，错误处理也更直观，可以用try..catch捕获错误，写代码时候更符合同步代码的习惯
+是一个异步编程语法糖，async表示当前函数是一个异步函数，会将返回值包装成一个promise。await关键字在 async 函数内部使用。await 表示等待promise的完成，等价于promise.then()。async函数是`Generator` 的封装，await 相当于 `yield` 。async/await 内置了自动执行器，利用 Promise 的 .then()：当 `yield` 抛出一个 Promise 时，执行器会在这个 Promise 的 .then() 回调里调用迭代器的 .next()。
+只要迭代器没有结束（done: false），就不断重复这个过程。相比于promise, async / await的可读性更好，错误处理也更直观，可以用try..catch捕获错误，写代码时候更符合同步代码的习惯
 进阶：既然 await 那么好用，如果我有两个互相不依赖的接口请求），我直接写两个 await 会有什么问题？该怎么优化？
-答：直接写两个await会串行阻塞，导致不必要的等待。那么我们可以await Promise.all()，将这两个接口请求放进promise.all()中包装成一个promsie，同时发出请求
+答：直接写两个await会串行阻塞，导致不必要的等待。那么我们可以await Promise.all()，将这两个接口请求放进promise.all()中包装成一个promise，同时发出请求
 # 继承方式
 * 原型链继承: 将子类的原型（`prototype`）直接指向父类的一个实例。
 * 构造函数继承: 在子类构造函数中，通过 `Parent.call(this)` 来调用父类构造函数。
@@ -96,30 +97,31 @@ js 是单线程的，为了防止代码阻塞，任务分为同步和异步。
 * 寄生组合式继承:  解决组合继承调用两次父类构造函数的问题。它通过 `Object.create(Parent.prototype)` 来创建一个父类原型的副本，并将其赋值给子类原型，从而避免了直接调用父类构造函数。
 * `class` 语法:  `lass` 语法本质上是寄生组合式继承的语法糖。使用 `class` 关键字定义类，通过 `extends` 关键字实现继承，并在子类构造函数中使用 `super()` 来调用父类构造函数。
 # Proxy(直接背)
-Proxy 是 ES6 引入的一个内置构造函数，它用于创建对象的代理，能够拦截并自定义对这个对象的各种基本操作，比如属性的读取、赋值、函数的调用等。相当于一个“中间人”，它包裹着原始对象，所有对外部访问这个对象的请求，都会先经过 Proxy 的处理。
+Proxy 是 ES6 引入的一个内置构造函数，它用于创建对象的代理，能够拦截并自定义对这个对象的各种基本操作，比如属性的读取、赋值、函数的调用等。相当于一个“中间人”，它包裹着原始对象，所有外部访问这个对象的请求，都会先经过 Proxy 的处理。
 # ES6 新特性
 const、let， 模板字符串， 箭头函数，函数参数默认值，解构赋值，for...of 用于数组，for...in用于对象，Promise， 展开运算符(...)，对象字面量、class(原型链的语法糖)
 # 匿名函数
-匿名函数就是没有名字的函数。是一个函数表达式，没有函数提升。通常被赋值给一个变量、作为参数传递给另一个函数，或者在定义后立即执行。它可以创建独立作用域，避免变量污染全局命名空间。
+匿名函数就是*没有名字*的函数。是一个函数表达式，*没有函数提升*。通常被赋值给一个变量、作为参数传递给另一个函数，或者在定义后立即执行。它可以*创建独立作用域*，避免*变量污染*全局命名空间。
 # 箭头函数和普通函数的区别
-this指向：
+*this指向*：
 普通函数的this是动态的，可以用`call(), apply(), bind()`改变。而箭头函数是静态的，他没有自己的this，而是捕获定义时的外层作用域的this并沿用这个this。
 
-构造函数：
+*构造函数*：
 普通函数可以作为构造函数，用new 关键字，可以创建一个新对象，并将 this 绑定到该对象上。而箭头函数不能作为构造函数，如果new 一个箭头函数会报错，因为箭头函数没有construct方法也没有自己的this, 所以无法实例化
 
-arguments对象：
-普通函数有自己的 `arguments` 对象，是一个类数组对象，包含函数被调用时传入的所有参数。箭头函数：没有自己的 `arguments` 对象。如果在箭头函数中使用 `arguments`，它会去外层作用域查找。也可以使用 ES6 的剩余参数（...rest) 来代替。
+*arguments对象*：
+普通函数有自己的 `arguments` 对象，是一个类数组对象，包含函数被调用时传入的所有参数。箭头函数：没有自己的 `arguments` 对象。如果在箭头函数中使用 `arguments`，它会去外层作用域查找。也可以使用 ES6 的[[剩余参数 ...rest]]来代替。
 
-prototype: 
+*prototype*: 
 普通函数有prototype,而箭头函数没有。所以箭头函数没法通过原型链扩展方法
 
-适合场景
+*适合场景*
 适合写回调函数的时候用，因为它捕获定义时上下文的this，并且语法简洁
 # call、apply、bind 的区别是什么？
 call: 参数逐个传递，立即执行，返回值是函数执行结果
 apply: 参数为数组传递，立即执行，返回值是函数执行结果
 bind: 参数逐个传递，不立即执行，而是返回绑定this的新函数
+[[call, apply, bind|具体讲解]]
 # undefined 和 null 有什么区别
-undefined 表示未定义或缺失值，一个变量声明但未赋值会被js引擎初始化为undefined。null表示无对象引用，一般是有意赋值为null的，表示这里应该是一个对象 ，但是现在为空。使用typeof 时，undefined是undefined，null是object。转为数值时，undefiend是NaN, null是0
+undefined 表示*未定义或缺失值*，一个变量声明但未赋值会被js引擎初始化为undefined。null表示*无对象引用*，一般是有意赋值为null的，表示这里应该是一个对象 ，但是现在为空。*使用typeof 时*，undefined是undefined，null是object。*转为数值时*，undefiend是NaN, null是0
 # GC
