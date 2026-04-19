@@ -1,3 +1,12 @@
+# 盒模型
+浏览器在渲染页面时，会将所有的 HTML 元素都看作是矩形的盒子。盒子由四个部分组成：
+1. Content（内容区）：也就是元素实际显示的内容，比如文本或图片。
+2. Padding（内边距）： 内容区与边框之间的透明区域。
+3. Border（边框）： 围绕在内边距和内容区外面的线条。
+4. Margin（外边距）： 盒子与其他元素之间的外部间距，用于控制元素间的距离。
+
+盒模型主要分为两种：标准盒模型(content-box) 和 怪异盒模型(border-box)
+标准盒模型设置的 `width` 和 `height` 仅指 content 的大小。实际占据宽度 = `width` + `padding` + `border` + `margin`。怪异盒模型 设置的 `width` 和 `height` 包含了 content, padding, border。实际占据宽度 = `width` (已包含 padding 和 border) + `margin`。实际项目我一般通过 通配符选择器 `*` 全局设置 `box-sizing: border-box`。那么就可以直接按照设计的宽度设置元素，不用担心 padding 和 border 导致宽度超出
 # flex
 父：
 
